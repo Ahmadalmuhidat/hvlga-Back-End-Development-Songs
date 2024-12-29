@@ -15,10 +15,10 @@ SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 json_url = os.path.join(SITE_ROOT, "data", "songs.json")
 songs_list: list = json.load(open(json_url))
 
-mongodb_service = "localhost:27017"
-mongodb_username = os.environ.get("MONGODB_USERNAME")
-mongodb_password = os.environ.get("MONGODB_PASSWORD")
-mongodb_port = os.environ.get("MONGODB_PORT")
+mongodb_service = "mongodb/brew/mongodb-community"
+mongodb_username = "almuhidat"
+mongodb_password = "almuhidat"
+mongodb_port = 27017
 
 if mongodb_service == None:
   app.logger.error("Missing MongoDB server in the MONGODB_SERVICE variable")
